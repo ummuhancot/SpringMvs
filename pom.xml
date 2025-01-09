@@ -71,7 +71,8 @@
       <version>${postgresql.connector.version}</version>
     </dependency>
 
-    <!-- Java Web uygulamalarında gerekli :Servlet Dependency -->    <dependency>
+    <!-- Java Web uygulamalarında gerekli :Servlet Dependency -->
+    <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>${servlets.version}</version>
@@ -100,6 +101,20 @@
       <version>${taglib.version}</version>
     </dependency>
 
+    <!--jackson kütüphanesi objelerin JSON formatına veya tam tersi
+    JSON formatındaki datanın objeye dönüştürülmesini sağlar-->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.12.7</version>
+      <!-- Spring Framework 5.3 için uyumlu bir sürüm -->
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-jsr310</artifactId>
+      <version>2.12.7</version>
+    </dependency>
+    <!--ctrl+shift+/ yorum satırının kısa yolu -->
   </dependencies>
 
   <build>
