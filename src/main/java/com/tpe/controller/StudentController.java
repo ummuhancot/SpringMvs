@@ -2,17 +2,14 @@ package com.tpe.controller;
 
 
 import com.tpe.domain.Student;
-import com.tpe.exception.StudentNotFoundException;
 import com.tpe.exception.StudentNotFountException;
 import com.tpe.service.IStudentService;
-import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.persistence.PostUpdate;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -172,7 +169,7 @@ public class StudentController {
     //bir sayfa ve data gerekliyse modelandview kullanılır.
     //Exceptionları yakalamak icin bir metod yazcaz
     //@ExceptionHandler:try-catch bloğunun mantığıyla benzer çalışır
-    @ExceptionHandler(StudentNotFoundException.class)
+    @ExceptionHandler(StudentNotFountException.class)
     public ModelAndView handleException(Exception exception){
         ModelAndView modelAndView=new ModelAndView();
         modelAndView.addObject("message",exception.getMessage());
@@ -181,6 +178,5 @@ public class StudentController {
     }
     //http://localhost:8080/SpringMvc/students/delete/99
 
-
-
 }
+
