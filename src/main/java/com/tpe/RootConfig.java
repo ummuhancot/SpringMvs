@@ -9,7 +9,6 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
 import javax.sql.DataSource;
-import java.time.LocalDate;
 import java.util.Properties;
 
 //configrasyon ayarları otomatik olarak yapılır spring boot da

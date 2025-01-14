@@ -16,4 +16,6 @@ public interface CRepository<T,ID>{
     Optional<T> findById(ID id);
 
     List<T> findAllByDuration(int duration);
+
+    List<T> findAllByName(String name);
 }
